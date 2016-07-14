@@ -1,0 +1,51 @@
+config:
+  port: ${CONFIG_PORT:18080}
+discovery:
+  port: ${DISCOVERY_PORT:18761}
+
+spring:
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${discovery.port}/eureka/
+
+---
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:${config.port}
+
+---
+spring:
+  profiles: test
+  cloud:
+    config:
+      uri: http://localhost:${config.port}
+
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      uri: http://dev.clientcentric.online:${config.port}
+
+---
+spring:
+  profiles: qa
+  cloud:
+    config:
+      uri: http://qa.clientcentric.online:${config.port}
+
+---
+spring:
+  profiles: prod
+  cloud:
+    config:
+      uri: http://prod.clientcentric.online:${config.port}

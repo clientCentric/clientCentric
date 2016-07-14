@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  >
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>online.clientcentric</groupId>
+  <artifactId>bom-proj</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>ClientCentric Project Dependencies(POM)</name>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Common -->
+      <dependency>
+        <groupId>online.clientcentric.common.dependency</groupId>
+        <artifactId>common-dependency</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>online.clientcentric.common.config</groupId>
+        <artifactId>common-config</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>online.clientcentric.common.test</groupId>
+        <artifactId>common-test</artifactId>
+        <version>${project.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <!-- Common -->
+
+      <!-- Unit -->
+      <dependency>
+        <groupId>online.clientcentric.unit.sample.face</groupId>
+        <artifactId>unit-sample-face</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>online.clientcentric.unit.sample.impl</groupId>
+        <artifactId>unit-sample-impl</artifactId>
+        <version>${project.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <!-- Unit -->
+    </dependencies>
+  </dependencyManagement>
+</project>

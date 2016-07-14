@@ -1,0 +1,46 @@
+# eclipse Project Settings
+classes/
+test-classes/
+.settings/
+.classpath
+.project
+.springBeans
+
+
+# IDEA Project Settings
+*.iml
+.idea/
+
+# Local Settings
+*._local_.*
+
+
+# Bakups
+*.bak
+*~
+
+
+# maven
+target/
+war/
+
+
+# gwt
+.gwt/
+gwt-unitCache/
+
+
+# jython
+*$py.class
+*.egg-info
+
+
+# logs
+*.log
+
+
+# other
+/sql/
+*DS_Store*
+rebel.xml
+git.properties
